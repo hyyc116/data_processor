@@ -33,7 +33,7 @@ def extract_keywords_from_single_file(single_file):
     output_fos_keywords(fos_keyword_freq)
 
 def output_fos_keywords(fos_keyword_freq):
-    open('fos_keywords_freq.json','w').write(json.dumps(fos_keyword_freq))
+    open('fos_keywords_freq.json','w+').write(json.dumps(fos_keyword_freq))
     
     for field in fos_keyword_freq.keys():
         for keyword in fos_keyword_freq[field].keys():
