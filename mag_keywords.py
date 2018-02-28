@@ -27,10 +27,12 @@ def extract_keywords_from_single_file(single_file):
                 for keyword in keywords:
                     field = field.lower()
                     keyword = keyword.lower()
+                    try:
+                        # fos_keyword_freq[field][keyword]+=1
+                        print field+"\t"+keyword
 
-                    # fos_keyword_freq[field][keyword]+=1
-                    print field+"\t"+keyword
-
+                    except:
+                        continue
     # output_fos_keywords(fos_keyword_freq)
 
 def output_fos_keywords(fos_keyword_freq):
