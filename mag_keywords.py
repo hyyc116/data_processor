@@ -3,8 +3,6 @@
 from util import *
 
 
-
-
 def extract_keywords_from_single_file(single_file):
     fos_keyword_freq = defaultdict(lambda:defaultdict(int))
     sub_progress=0
@@ -28,9 +26,7 @@ def extract_keywords_from_single_file(single_file):
                     field = field.lower()
                     keyword = keyword.lower()
                     try:
-                        # fos_keyword_freq[field][keyword]+=1
                         print field+"\t"+keyword
-
                     except:
                         continue
     # output_fos_keywords(fos_keyword_freq)
@@ -56,6 +52,4 @@ def extract_keywords_from_dir(dir_path):
 
 
 if __name__ == '__main__':
-    # extract_keywords_from_single_file(sys.argv[1])
     extract_keywords_from_dir(sys.argv[1])
-    # output_fos_keywords()
